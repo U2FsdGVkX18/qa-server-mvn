@@ -1,0 +1,14 @@
+server:
+  port: 1110 #本服务启动端口
+logging:
+  level:
+    root: debug #打印日志等级
+spring:
+  datasource:
+    druid: #mysql数据源和数据库配置
+      url: jdbc:mysql://121.41.203.160:3307/metersphere?nullCatalogMeansCurrent=true&useUnicode=true&characterEncoding=utf-8&nullNamePatternMatchesAll=true
+      username: root
+      password: Password123@mysql
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true   #在映射实体或者属性时，将数据库中表名和字段名中的下划线去掉，按照驼峰命名法映射
