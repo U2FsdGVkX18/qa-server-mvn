@@ -2,13 +2,22 @@ server:
   port: 1110 #本服务启动端口
 logging:
   level:
-    root: debug #打印日志等级
+    root: info #打印日志等级
 spring:
   datasource:
     druid: #mysql数据源和数据库配置
       url: jdbc:mysql://121.41.203.160:3307/metersphere?nullCatalogMeansCurrent=true&useUnicode=true&characterEncoding=utf-8&nullNamePatternMatchesAll=true
       username: root
       password: Password123@mysql
+  task: #springTask定时任务
+    scheduling:
+      #      pool:
+      #        size: 1
+      thread-name-prefix: task  #任务前缀区分
+    execution:
+      shutdown:
+        await-termination: false   #线程关闭时是否等所有任务结束
+        await-termination-period: 10s  #线程最大的等待时间,防止线程陷入循环关不掉
 mybatis-plus:
   configuration:
     map-underscore-to-camel-case: true   #在映射实体或者属性时，将数据库中表名和字段名中的下划线去掉，按照驼峰命名法映射

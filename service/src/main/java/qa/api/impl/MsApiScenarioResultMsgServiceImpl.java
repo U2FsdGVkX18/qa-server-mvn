@@ -1,7 +1,6 @@
 package qa.api.impl;
 
 import com.alibaba.fastjson.JSONObject;
-import common.DingMsgSend;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.ObjectUtils;
 import org.springframework.stereotype.Service;
@@ -9,6 +8,7 @@ import qa.MsApiScenario;
 import qa.MsApiScenarioReport;
 import qa.api.MsApiScenarioResultMsgMapper;
 import qa.api.service.MsApiScenarioResultMsgService;
+import qa.common.DingMsgSend;
 
 import javax.annotation.Resource;
 import java.util.HashMap;
